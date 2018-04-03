@@ -1,0 +1,14 @@
+*,
+*::after,
+*::before { /*Select psuedoelements as well*/
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit; /*Inherit box-sizing to make it easier for individual elements to be modified*/
+}
+html {
+	font-size: 62.5%; /*Use percentage in order to reference user's root font-size, which is normally 16px*/
+}
+
+body {
+	box-sizing: border-box;
+}
