@@ -16,6 +16,10 @@
         display: block;
         transition: all .3s;
 
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
         &:invalid {
             box-shadow: none; //remove red border on firefox
             border-bottom: solid 3px $color-secondary-dark;
@@ -62,6 +66,11 @@
     &__radio-group {
         width: 49%;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     &__radio-label {
