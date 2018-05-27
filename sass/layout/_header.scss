@@ -1,7 +1,10 @@
 .header {
 	height: 95vh; 
-	background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), 
-	url(../img/hero.jpg);
+	background-image: linear-gradient(
+			to right bottom, 
+			rgba($color-primary-light, 0.8), 
+			rgba($color-primary-dark, 0.8)), 
+		url(../img/hero-small.jpg);
 
 	/*Fixes background width and height to be the same as the container depending on viewport dimensions*/
 	background-size: cover; 
@@ -11,6 +14,15 @@
 	position: relative;
 
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	@media (min-resolution: 192dpi) and (min-width: 37.5em), 
+		   (min-width: 125em) { //Resolution of Apple retina display
+		background-image: linear-gradient(
+				to right bottom, 
+				rgba($color-primary-light, 0.8), 
+				rgba($color-primary-dark, 0.8)), 
+			url(../img/hero.jpg);
+	}
 
 	@include respond(phone) {
 		clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
